@@ -65,16 +65,50 @@ foreach ($kencho as $prefecture => $capital) {
 }
 
 // Q10 関数-1
+function hello($name) {
+  echo $name . "さん、こんにちは！\n";
+}
 
-
+hello('金谷');
+hello('安藤');
 
 // Q11 関数-2
-
+function calcTaxInPrice($p) {
+  return $p * 1.1;
+}
+$price = 1000;
+$taxInPrice = calcTaxInPrice($price);
+echo $price . 'の商品の税込価格は' . $taxInPrice . "円です。\n";
 
 // Q12 関数とif文
+function distinguishNum($num) {
+  $remainder = $num % 2;
+  if ($remainder === 0) {
+    return $num . "は偶数です。\n";
+  } else {
+    return $num . "は奇数です。\n";
+  }
+}
 
+echo distinguishNum(11);
+echo distinguishNum(24);
 
 // Q13 関数とswitch文
+function evaluateGrade($grade) {
+  switch ($grade) {
+    case 'A':
+    case 'B':
+      return "合格です。\n";
+    case 'C':
+      return "合格ですが追加課題があります。\n";
+    case 'D':
+      return "不合格です。\n";
+    default:
+      return "判定不明です。講師に問い合わせてください。\n";
+  }
+}
 
+echo evaluateGrade('A');
+echo evaluateGrade('E');
 
 ?>
