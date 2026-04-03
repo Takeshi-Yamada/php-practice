@@ -15,12 +15,11 @@ echo '現在時刻は' . date('Y年m月d日 H時i分s秒') . 'です。';
 $device = 'Windows';
 if ($device === 'Windows') {
   echo '使用OSは、windowsです。';
-} else {
-  if ($device === 'Mac') {
+}
+if ($device === 'Mac') {
     echo '使用OSは、Macです。';
-  } else {
+} else {
     echo 'どちらでもありません。';
-  }
 }
 
 // Q5 条件分岐-2 三項演算子
@@ -57,7 +56,7 @@ foreach ($kencho as $prefecture => $capital) {
 $kencho['愛知県'] = '名古屋市';
 $kencho['大阪府'] = '大阪市';
 foreach ($kencho as $prefecture => $capital) {
-  if(in_Array($prefecture, $kanto)) {
+  if(in_array($prefecture, $kanto)) {
     echo $prefecture . 'の県庁所在地は、' . $capital . "です。\n";
   } else {
     echo $prefecture . "は関東地方ではありません。\n";
@@ -66,11 +65,11 @@ foreach ($kencho as $prefecture => $capital) {
 
 // Q10 関数-1
 function hello($name) {
-  echo $name . "さん、こんにちは！\n";
+  return $name . "さん、こんにちは！\n";
 }
 
-hello('金谷');
-hello('安藤');
+echo hello('金谷');
+echo hello('安藤');
 
 // Q11 関数-2
 function calcTaxInPrice($p) {

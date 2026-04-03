@@ -61,7 +61,7 @@ class Student
     }
 
     public function getInfo() {
-      echo '学籍番号' . $this->studentId . '番の生徒は' . $this->studentName . "です。\n";
+        return '学籍番号' . $this->studentId . '番の生徒は' . $this->studentName . "です。\n";
     }
 
     public function attend($lang)
@@ -71,7 +71,7 @@ class Student
 }
 
 $yamada = new Student(120, '山田');
-$yamada->getInfo();
+echo $yamada->getInfo();
 
 // Q4 オブジェクト-2
 $yamada->attend('PHP');
